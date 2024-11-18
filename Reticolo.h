@@ -29,7 +29,7 @@ class Reticolo{
     void lettura_file(std::ifstream& ifile);
     void lettura_dati_piramide(std::ifstream& ifile);
     void lettura_dati_moto(std::ifstream& ifile);
-    void scrittura_file(std::ofstream& ofile);
+    void scrittura_file(int i, std::ofstream& ofile);
     void aggiunte_file(std::ofstream& ofile); //per aggiungere senza intestazione
     void aggiunte_atomo(std::ofstream& ofile);
     void seleziona_sito(int i);

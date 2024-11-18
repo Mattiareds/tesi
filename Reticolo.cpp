@@ -31,8 +31,9 @@ void Reticolo::lettura_dati_piramide(ifstream& ifile){
     ifile>>mc_step;
 }
 
-void Reticolo::scrittura_file(ofstream& ofile){
-    ofile<<N<<endl;
+//prende in ingresso il numero di atomi che dipende da caso a caso
+void Reticolo::scrittura_file(int number_of_atoms,ofstream& ofile){
+    ofile<<number_of_atoms<<endl;
     ofile<<specie_chimica<<" "<<specie_chimica<<" "<<a<<" "<<b<<endl;
     for(int i=0;i<siti.size();i++){
         ofile<<specie_chimica<<" "<<siti[i][0]<<" "<<siti[i][1]<<" "<<siti[i][2]<<endl;
