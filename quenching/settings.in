@@ -12,7 +12,7 @@ qq                     # choice_sim: qq=quenching ev=evolution hf=heating/freezi
 521,737		       # numbers to initialise ranmar (prime number of 3 or 4 digits)
 # for quenching simulations
 0.d0		       # evo_temp = initial temperature
-0.05d0		       # timefin = duration of the simulation (ns)
+0.02d0		       # timefin = duration of the simulation (ns)
 0.		       # timelag = thermalization time 
 0		       # nxfix = if it is 1 the x coordinate of the last atom is fixed, if it is 0 the coordinate is free
 # for growth simulations
@@ -30,6 +30,6 @@ qq                     # choice_sim: qq=quenching ev=evolution hf=heating/freezi
 1.d0		       # rate_temp, rate of temperature change [K/ns]
 #output
 100		       # nsections = number of sub-intervals for calculating averages (used only in qq and ev simulations)
-1000.d0		       # photo_rate=photos per nanosecond
+2000.d0		       # photo_rate=photos per nanosecond
 
 
