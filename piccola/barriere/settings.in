@@ -1,0 +1,35 @@
+x# general settings
+gpt                    # potential. Can be 'l_j', 'mrs', or 'gpt' 
+AuPt.in        # param_file: contains potential parameters (string of no more than 20 characters)
+input.xyz             # cluster_file: xyz file with initial positions (string of no more than 20 characters)
+5.d-15                 # tstep: time step in seconds
+no		       # thermostat = "si" or "no"
+5.d11		       # thermostat frequency vnu
+1.d0                   # rshell = thickness of external shell for neighbor list updating
+si		       # cut-off for potential energy function
+8		       # nfix= number of fixed atoms, the first nfix atoms are frozen
+qq                     # choice_sim: qq=quenching ev=evolution hf=heating/freezing gr=growth
+521,737		       # numbers to initialise ranmar (prime number of 3 or 4 digits)
+# for quenching simulations
+0.d0		       # evo_temp = initial temperature
+0.1d0		       # timefin = duration of the simulation (ns)
+0.		       # timelag = thermalization time 
+1		       # nxfix = if it is 1 the x coordinate of the last atom is fixed, if it is 0 the coordinate is free
+# for growth simulations
+0.000001d0              # growth_rate (atoms/ns)
+300.d0		   # growth_temp = growth temperature
+100		 # ndepo = atoms to be deposited
+0.25,0.25,0.25,0.25            # growth_p1(i) = probability of depositing atoms of species i (same order as in param_file)
+# for evolution simulations
+500.d0		   # evo_temp = temperature of the simulation (700)
+100.d0		   # timefin = duration of the simulation (ns) (20)
+100		   # nsections = number of sub-intervals for calculating averages 
+# for heating/freezing simulations
+300.d0		   # tinit, initial temperature
+700.d0		   # tfin, final temperature
+1.d0		       # rate_temp, rate of temperature change [K/ns]
+#output
+100		       # nsections = number of sub-intervals for calculating averages (used only in qq and ev simulations)
+2000.d0		       # photo_rate=photos per nanosecond
+
+

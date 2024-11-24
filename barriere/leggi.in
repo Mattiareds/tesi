@@ -1,0 +1,19 @@
+# general settings
+521		       # first number to initialise ranmar (NUMERI	PRIMI DI 3 O 4 CIFRE, è IL SEED)
+737		       # second number...
+rgl            # potential. Can be 'rgl', or... (NON CAMBIARE)
+AgNi_old.in       # param_file. It is the file containing rgl potential parameters (NOME FILE)
+5.d-15         # tstep [s] (sopra 1000k può diminuire è il timestep in secondi)
+no		       # thermostat = "si" (=yes) or "no" (temperatura costante)
+1.d0             # rshell = thickness of external shell for neighbor list updating (NON CAMBIARE)
+si		       # cut-off for potential energy function (NON CAMBIARE)
+qq             # choice_sim: qq=quenching
+1000.d0		   # photo_rate=photos per nanosecond
+13		# nfix= number of fixed atoms 
+1		# nxfix = if it is 1 the x coordinate of the last atom is kept fixed, if it 0 the coordinate is free
+# for quenching simulations
+300.d0		   # evo_temp = initial temperature
+1.d0		   # timefin = duration of the simulation (ns)
+0.		   # timelag = initial thermalization time
+2000		   # nsections = number of sub-intervals for calculating averages 
+

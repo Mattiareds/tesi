@@ -24,28 +24,35 @@ int main(){
     ifstream base("piramide.xyz");
     piramide.lettura_file(base);
 
+    ifile.close();
+    file_siti.close();
+    base.close();
+
     //verifica piani
     reticolo.costruttore_piani();
     reticolo.associa_piano();
 
-    //posiziono casualmente, la posizione è accettata solo se non è su uno spigolo
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> distribuzione_posizione(0,reticolo.N-1);
-    bool start=false;
-    while(start==false){
-        int initial=distribuzione_posizione(gen);
-        if(reticolo.siti[initial][7]==1){
-            start= true;
-            reticolo.seleziona_sito(initial);
-        }else{
-            start= false;
+
+    vector<int> indici;
+
+    for(int i=0;i<reticolo.N;i++){
+        cout<<reticolo.siti[i][7]<<endl;
+        if(reticolo.siti[i][7]==1){
+            cout<<"pino"<<endl;
+            if(reticolo.siti[i][3]==5){
+                indici.push_back(i);
+                
+            }
         }
     }
 
     ofstream ofile;
     ofile.open("input.xyz");
-    piramide.scrittura_file(piramide.N +1,ofile);
-    reticolo.aggiunte_atomo(ofile);
+    piramide.scrittura_file(piramide.N +indici.size(),ofile);
+    for(int j=0;j<indici.size();j++){
+        reticolo.seleziona_sito(indici[j]);
+        reticolo.aggiunte_atomo(ofile);
+    }
+
 }
 

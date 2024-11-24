@@ -1,0 +1,7 @@
+main barriere crea un file di input senza atomo oro ma con le posizioni
+del platino sistemate in modo che i primi n atomi siano fissati
+
+il file da cui leggere le coordinate è già quello quenchato, in modo tale che ci poniamo già in un minimo, le coordinate di partenza e di arrivo sono quelle quenchate ricavate dai risultati del quenching su quelle posizioni per lo stesso motivo
+
+quindi si prende il file dal quenching le posizioni del platino si usano come input (start) per il main barriere mentre la posizione iniziale e finale dell'oro si mettono nell'altro input
+

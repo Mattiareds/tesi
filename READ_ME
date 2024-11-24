@@ -1,0 +1,10 @@
+"pr_v4.cpp" crea una piramide con dimensioni e cut dati da "dati_piramide.txt", inoltre crea un file con i siti appena sopra
+rispetto alle versioni precedenti ruota in modo adeguato in modo da avere le faccette 100 effettivamente in direzione 100   
+
+Sul file da scrivere: 
+passo reticolare numero atomi diagonale
+taglio sopra taglio sotto taglio laterale
+mc step
+
+
+in "main_for_quenching" creo una configurazione con gia gli ori nella base di sotto, per capire se è più conveniente stare con 4 ori oppure con 3 platino 
